@@ -1,16 +1,14 @@
 package com.example.demo.controller;
 
-import com.example.demo.service.ContactServiceImpl;
+import com.example.demo.service.impl.ContactServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.entities.Contact;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/contacts/")
 public class ContactsController {
-
-//    ConcurrentHashMap<Integer, Contact> concurrentHashMap = new ConcurrentHashMap<>();
 
     @Autowired
     ContactServiceImpl contactService;
